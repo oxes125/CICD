@@ -27,7 +27,7 @@ class Demo1ApplicationTests {
 		lista=us.getUsers("Gabriel", "Cortez");
 		
 		assertEquals(lista.get(0).getApellido(), "asd");
-		assertEquals(lista.get(0).getNombre(), "Gabasdriel");
+		assertEquals(lista.get(0).getNombre(), "Gabzasdriel");
 		
 	}
 
