@@ -20,7 +20,7 @@ public class Controller {
 	@Autowired
 	private UserService us;
 	
-	//add comment
+
 	@GetMapping("/{nombre}/{apellino}")
 	public List<User> getUser(@PathVariable String nombre,@PathVariable String apellino) {
 		
