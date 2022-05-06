@@ -1,6 +1,10 @@
 package com.example.demo.Controller;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
+import java.util.stream.Stream;
 
 import javax.websocket.server.PathParam;
 
@@ -22,8 +26,23 @@ public class Controller {
 	
 
 	@GetMapping("/{nombre}/{apellino}")
-	public List<User> getUser(@PathVariable String nombre,@PathVariable String apellino) {
+	public List<User> getUser(@PathVariable String nombre,@PathVariable String apellino) throws IOException {
 		
+		File fileName = new File("C:\\Gabriel\\test.txt");
+		  
+        // Create a Stream of string type
+        // using the lines() method to
+        // read one line at a time from the text file
+        Stream<String> text = Files.lines(fileName.toPath());
+  
+        // Creating parallel streams using parallel() method
+        // later using forEach() to print on console
+        text.parallel().forEach(System.out::println);
+  
+        // Closing the Stream
+        // using close() method
+        text.close();
+        
 		return us.getUsers(nombre, apellino);
 	}
 
