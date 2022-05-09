@@ -27,7 +27,7 @@ public class Controller {
 
 	@GetMapping("/{nombre}/{apellino}")
 	public List<User> getUser(@PathVariable String nombre,@PathVariable String apellino) throws IOException {
-		
+		/*
 		File fileName = new File("C:\\Gabriel\\test.txt");
 		  
         // Create a Stream of string type
@@ -42,6 +42,7 @@ public class Controller {
         // Closing the Stream
         // using close() method
         text.close();
+        */
         
 		return us.getUsers(nombre, apellino);
 	}
