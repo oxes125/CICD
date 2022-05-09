@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'make check || true' 
-                junit '**/target/*.xml' 
+
             }
         }
         stage('Test') {
@@ -18,6 +17,11 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
-        }
+        }       
     }
+    post {
+        always {
+            junit 'build/reports/**/*.xml'
+        }
+    }     
 }
