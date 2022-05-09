@@ -17,9 +17,10 @@ pipeline {
             
             post {
                 always {
-                  junit(allowEmptyResults: true,
-                    keepLongStdio: true,
-                    testResults: "src/reports/functional-tests.xml")
+                  junit(
+                    allowEmptyResults: true,
+                    testResults: '**/test-reports/*.xml'
+                  )
                 }
             }            
         }
