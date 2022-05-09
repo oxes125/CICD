@@ -12,12 +12,12 @@ pipeline {
         }
         stage ('Test') {
             steps {
-                bat 'mvn test'
+                bat '.\mvnw test'
             }
         }
         stage ('Build') {
             steps {
-                bat 'mvn -Dmaven.test.failure.ignore=true install' 
+                bat '.\mvnw -Dmaven.test.failure.ignore=true install' 
             }
             post {
                 always {
