@@ -12,20 +12,22 @@ pipeline {
         }
         stage ('Test') {
             steps {
-                bat '.\mvnw test'
+                bat 'mvn test'
             }
-        }
-        stage ('Build') {
-            steps {
-                bat '.\mvnw -Dmaven.test.failure.ignore=true install' 
-            }
+            
             post {
                 always {
                   junit(allowEmptyResults: true,
                     keepLongStdio: true,
                     testResults: "src/reports/functional-tests.xml")
                 }
+            }            
+        }
+        stage ('Build') {
+            steps {
+                bat 'mvn -Dmaven.test.failure.ignore=true install' 
             }
+
         }
     }
 }
