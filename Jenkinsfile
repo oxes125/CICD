@@ -19,7 +19,7 @@ pipeline {
                 always {
                   junit(allowEmptyResults: true,
                     keepLongStdio: true,
-                    testResults: "**/test-results/functional-tests.xml")
+                    testResults: "src/reports/functional-tests.xml")
                 }
             }
         }
