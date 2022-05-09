@@ -16,8 +16,10 @@ pipeline {
                 bat 'mvn -Dmaven.test.failure.ignore=true install' 
             }
             post {
-                success {
-                    junit 'test-results.xml'
+                always {
+                  junit(allowEmptyResults: false,
+                    keepLongStdio: true,
+                    testResults: "**/test-results/functional-tests.xml")
                 }
             }
         }
