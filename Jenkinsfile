@@ -10,7 +10,11 @@ pipeline {
                 echo 'Initialize..'
             }
         }
-
+        stage ('Test') {
+            steps {
+                bat 'mvn test'
+            }
+        }
         stage ('Build') {
             steps {
                 bat 'mvn -Dmaven.test.failure.ignore=true install' 
