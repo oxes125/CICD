@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
-
+                echo 'Initialize..'
             }
         }
 
