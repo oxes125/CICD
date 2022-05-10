@@ -1,21 +1,18 @@
-<tcSummaryAction _class="com.smartbear.jenkins.plugins.testcomplete.TcSummaryAction">
-  <report>
-    <agent>Jenkins</agent>
-    <details>
-      <duration>4806</duration>
-      <errors>0</errors>
-      <timestamp>1535544341163</timestamp>
-      <warnings>0</warnings>
-    </details>
-    <error/>
-    <exitCode>0</exitCode>
-    <failedToStart>false</failedToStart>
-    <success>true</success>
-    <testName>
-      Orders_C#_JavaScript/Orders_C#_JavaScript/Orders_JavaScript/Main
-    </testName>
-    <url>
-      http://localhost:8080/job/TestJob/6/TestComplete/reports/3536754
-    </url>
-  </report>
-</tcSummaryAction>
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+   <testsuite name="JUnitXmlReporter" errors="0" tests="0" failures="0" time="0" timestamp="2013-05-24T10:23:58" />
+   <testsuite name="JUnitXmlReporter.constructor" errors="0" skipped="1" tests="3" failures="1" time="0.006" timestamp="2013-05-24T10:23:58">
+      <properties>
+         <property name="java.vendor" value="Sun Microsystems Inc." />
+         <property name="compiler.debug" value="on" />
+         <property name="project.jdk.classpath" value="jdk.classpath.1.6" />
+      </properties>
+      <testcase classname="JUnitXmlReporter.constructor" name="should default path to an empty string" time="0.006">
+         <failure message="test failure">Assertion failed</failure>
+      </testcase>
+      <testcase classname="JUnitXmlReporter.constructor" name="should default consolidate to true" time="0">
+         <skipped />
+      </testcase>
+      <testcase classname="JUnitXmlReporter.constructor" name="should default useDotNotation to true" time="0" />
+   </testsuite>
+</testsuites>
